@@ -1,0 +1,26 @@
+/* src/SmokeEffect.css */
+@keyframes smoke {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100px) scale(2);
+    }
+  }
+  
+  .smoke {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    animation: smoke 2s linear infinite;
+    pointer-events: none;
+  }
+  
+  .hover-smoke:hover .smoke {
+    opacity: 1;
+  }
+  
